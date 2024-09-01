@@ -72,7 +72,7 @@ jobs:
       SOMESECRET: ${{ secrets.SOMESECRET }}
   print-deploy-result:
     needs: deploy
-    run-on: ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Prine deploy output
         run: echo "${{ needs.deploy.outputs.result }}"
