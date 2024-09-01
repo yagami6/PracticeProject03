@@ -69,7 +69,7 @@ jobs:
     with: 
       artifact-name: dist-files
     secrets:
-      some-secret: ${{ secret.some-secret }}
+      some-secret: ${{ secrets.some-secret }}
   report:
     runs-on: ubuntu-latest
     needs: [lint, deploy]
